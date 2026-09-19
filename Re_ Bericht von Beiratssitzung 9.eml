@@ -1,0 +1,226 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:a0c:f70c:0:b0:570:2883:8d89 with SMTP id w12csp1392389qvn;
+        Mon, 13 Mar 2023 06:06:39 -0700 (PDT)
+X-Google-Smtp-Source: AK7set8DYswhSE68rzj3L4cyRqFdQkcRn029fYwJ2H0woUZJMGoQSK3mkVG9XxeeJQUBjsuMIWiR
+X-Received: by 2002:a05:600c:4e47:b0:3ea:f6c4:5f3f with SMTP id e7-20020a05600c4e4700b003eaf6c45f3fmr10501243wmq.13.1678712799409;
+        Mon, 13 Mar 2023 06:06:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1678712799; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lFMy1xlFMKebjhV7/LZDeUsmyF766JBQGglLi1bn2iFa6gb81dnjK3ED+kcwaLPCay
+         NQUO9tG1DesjJjFSKecKDUq75SN+fqKxtI8ICdPdh278Y0JuJC6arQaVlAyCUEhOqF43
+         A4byDoVTTD7j+FjPOzL63hFTfFr7lIjbLLnvvJSmRUVsE2nBYwfctG/1WwLpH5RUf0yG
+         GghC7kJUl6pfVmCAJ9lECjOMKANjwrHoRrQHLLj8jSqypiEUAWUyR4GO71ONcC/kcYWB
+         9zIC9+2DqPn+DFUET7KRbQ/ykkys6Wjh4e22zXhCzV6uNxXTOqZ9tOkSAVfewGzDIy8X
+         Oovw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=ui-outboundreport:references:to:cc:in-reply-to:date:subject
+         :mime-version:message-id:from:dkim-signature;
+        bh=inT8tvY2kw4KzZrNgGSfwsxXE5AwSWYcaAgUpc2EKNY=;
+        b=Pl1YSyO/1UrqgwSqlG1TJSlDUvpsw6Q2yDNa7nNJl35RXkls7PwFLEFTAQClS9TG6X
+         Ar+lby68qku/iUAA0XV8wVdYit4d+zqeL6yGPAZbIEhBaWpuL8OUh/h3GNn6wdayjhSA
+         ms8T9rXdJkD9oP5Ce5TYHF7VigI2b/xMj0M3A+vueNe/zvN6yfxxyLbMt5tPK3n5pNik
+         OkiF8DBMLm5QHDzlzcFg/DxVN05NMLYHGUChgDrT8buXKVvU6b1HVXU99Sp6JaffF7/N
+         bn2UB94lF0qf0JVZL1Irt92IsfELwLH2uiDcCuFj07CXf7gdfMp9XS+n0w6Du/zLFu3z
+         E0Eg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=CH5FCBjL;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.12 as permitted sender) smtp.mailfrom=ulrich.gerhard.mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+Return-Path: <ulrich.gerhard.mueller@web.de>
+Received: from mout.web.de (mout.web.de. [212.227.17.12])
+        by mx.google.com with ESMTPS id he6-20020a05600c540600b003e21d3dec37si5467431wmb.130.2023.03.13.06.06.39
+        for <drvonderbey@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 13 Mar 2023 06:06:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.12 as permitted sender) client-ip=212.227.17.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=CH5FCBjL;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.12 as permitted sender) smtp.mailfrom=ulrich.gerhard.mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de; s=s29768273;
+	t=1678712798; i=ulrich.gerhard.mueller@web.de;
+	bh=yHy2qSoNEeaTmip5rX+BAUdmPncCQ3MLAYifEfp31yo=;
+	h=X-UI-Sender-Class:From:Subject:Date:In-Reply-To:Cc:To:References;
+	b=CH5FCBjLqwDLuxQeqnF4vX1/cDVL+XHcxNoYFa1nZRByueTgrn8Jh9buy3piW6Agz
+	 /Jw+grtAAUFkQ1fj5E2CmQkeAgwUUQzf0BtZmDLzglA0XjOG2cA27CMFovKPYK2vsO
+	 +/9XmvwzCLwjFmkEf8mthqmJhsTfbK0bK95GXEKh6EmIp1cV8tvuY4/i2lC5vVGzoH
+	 iYOxd1cgK13VMbwkderiJ8WpdlBtq8i9AZGD91CY49iA+lB+aWtpi1FDmX1q8YiXah
+	 ZpU4Qn0We65CQBkcVG4EqCnGHhYIzheEXQHatHMcRRE5ENdLq1CUmT226cvaOTG6GG
+	 t2ewHRvHYqgkQ==
+X-UI-Sender-Class: 814a7b36-bfc1-4dae-8640-3722d8ec6cd6
+Received: from smtpclient.apple ([88.75.11.4]) by smtp.web.de (mrweb106
+ [213.165.67.124]) with ESMTPSA (Nemesis) id 1MPaMS-1pxCk02Ijq-00MtPE; Mon, 13
+ Mar 2023 14:06:38 +0100
+From: =?utf-8?Q?Ulrich_M=C3=BCller?= <ulrich.gerhard.mueller@web.de>
+Message-Id: <A15E53C0-B389-4F49-BB3D-975B77DF339E@web.de>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_90C70908-30B0-4F57-87FA-293D60CDC6A7"
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.120.41.1.2\))
+Subject: Re: Bericht von Beiratssitzung
+Date: Mon, 13 Mar 2023 14:06:37 +0100
+In-Reply-To: <BF1B922B-DD2F-48D8-8435-119F56A22DE7@gmail.com>
+Cc: =?utf-8?Q?Renate_Hoffmann-M=C3=BCller?= <mueller_renate@bluewin.ch>,
+ =?utf-8?Q?Lara_L=C3=BChn?= <lara-luehn@hotmail.de>,
+ =?utf-8?Q?Alexia_L=C3=BChn?= <lexi-luehn@hotmail.de>,
+ =?utf-8?B?IkRyLiBTdGVwaGFuIE3DvGxsZXIi?= <dr.s.mueller@hotmail.com>
+To: "Dr. Werner von der Bey" <drvonderbey@gmail.com>
+References: <3B574BE0-1321-4BC2-BD36-32868693DA3E@web.de>
+ <B644FFAC-BEF7-486E-975C-4AF489816EEC@gmail.com>
+ <BF1B922B-DD2F-48D8-8435-119F56A22DE7@gmail.com>
+X-Mailer: Apple Mail (2.3696.120.41.1.2)
+X-Provags-ID: V03:K1:DVNSa87pGgGwGGGesozP5oQjaV/bec6uXDAf2pXomeHX04JG6yw
+ kYK645zFzeouxnh5HFTC2FLAd31K8LqHIraT0gJfZLRndHuoLb/EO8+1n8TKmRvDp5pcwZ2
+ 0EmuqRCgqObhqV5l63PwVjAwMjAcymzKJ957Va8bA0kHn8n2ogCd9CSwy2tVcZxGp13KZdw
+ ACy7i5o3Sq6665Ts9x/hg==
+X-Spam-Flag: NO
+UI-OutboundReport: notjunk:1;M01:P0:moYNpu69AN0=;xyPl2oQaKwNGx9DTxMwOvMgAWwV
+ WuOePh2AT1NRCTqs4cSwBtuJxsdDSzz3jT18nmIuZVOAyRblyos+7UQkHyx5gv/CnjDioNLFh
+ snqk3cfv3VCtMX7BTnhI043y2oUjBZZNmFOVfXucQnRCG8BkTkz81OmzjeC8SEjiRunmM8dVv
+ uWVC0h2tRfctJ4h1BZQPaEGsf/esmf909ArpTicoCIdMCwn9VHohYKkc1K7VSyaRKr42lm9P0
+ QSgGoozCe+gGyNIa209U9n0PBntENkucDcaTpUepsqYlRFTUa3dof4iYEBKBI/WfHeSj/ZyZf
+ Efzn+qzHCrBwCs+TPPYkwFJZGne8ejRWNIwo4Ntq2dzF70W2ZHx2ZW2LVzyBUrQPiOj3UO4RL
+ +DghTb+g3nXDq6PFNB70cuSjdtEwm0UFpQu6Gtt5zxvomxW1/69OljF1uMOkAjUbMXLxGp9Ic
+ BmX4L0zK/R0odvqUhrUBvvfEM+HHysHI67wGbp1cRmBj5LmYVYMW/Remupy7//QkwE28zmlBw
+ vCtz9wF9SC4GGChwLJY14xNvzx+V8PsaG02mYJzMvUvASad4IBvEgLd1Tqnb5OYzZaklvE0IL
+ giHk/sdzHvg26usKh2zhW59Dnm3YjFWPLH2lyYiLnMq8RctK9E1TRHk59HwRv2xRlIHLJjKtz
+ Q6klrWiFCk6qxQcVdLqeU05vbxnn0tlb3Mf+OMKt6Xcxm0mVeV4U93ea+pYtA8C1DfsgWs2PX
+ Q/E4qO3id2s6LTghjatiZCP/jN3hqnQ1IknpKu7rV0nUynpkNKQEadXwbm4NtXejcJlBnoz1x
+ nT3hTaLmJICnHbMiXqLC/mcVxQdoZ8ol2QmYditnsPW9zRhPYHYKqWqepeVTMGMcNrQKTc+IL
+ JZ8iGmmlH0+d6ZyWltqWhyHJom/C+bDomNfkljbwyXgVbfjOvBZ3VkhKZEUfYrUPf/fCtbsow
+ qfIGfA==
+
+
+--Apple-Mail=_90C70908-30B0-4F57-87FA-293D60CDC6A7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Liebe Mitgesellschafter,
+
+ich wei=C3=9F nicht, ob wir einer Gesellschafterversammlung unter =
+Anwesenheit bed=C3=BCrfen. Was w=C3=A4ren denn die Themen? Wer w=C3=BCnsch=
+t denn eine? Wer eine Gesellschafterversammlung w=C3=BCnscht, soll dann =
+bitte auch das Thema angeben, das er/sie behandelt haben m=C3=B6chte, =
+damit sich die anderen zu dem Thema auch schon Gedanken machen k=C3=B6nnen=
+. Derzeit habe ich auch noch keine Steuerbescheinigung, aus der der =
+Bruttobetrag und Nettobetrag der Gewinnauszahlung hervorgeht. Sicher =
+k=C3=B6nnen wir in dem Gesellschafterbeschluss die auszuzahlenden =
+Betr=C3=A4ge momentan noch gar nicht nennen. Was die Koordination einer =
+Gesellschafterversammlung anbelangt, darf das ruhig einmal jemand =
+anderes =C3=BCbernehmen. Nach der Satzung bedarf es zur Einberufung =
+einer Gesellschafterversammlung, die =C3=BCber die Ermittlung des =
+j=C3=A4hrlichen =C3=9Cberschusses hinausgeht, einer Zustimmung von 25% =
+der Stimmen.=20
+
+Viele Gr=C3=BC=C3=9Fe
+
+Ulrich
+
+
+> Am 12.03.2023 um 20:05 schrieb Dr. von der Bey =
+<drvonderbey@gmail.com>:
+>=20
+> Liebe Gesellschafter,
+>=20
+> Ich hoffe, ihr habt ein sch=C3=B6nes Wochenende! Ich habe mir die =
+Berichte durchgelesen.=20
+> Im Gesellschaftervertrag steht ja, dass mit Bekanntgabe des =
+Ergebnisses eine Gesellschafterversammlung einzuberufen ist. Ich w=C3=BCrd=
+e das sehr begr=C3=BC=C3=9Fen. Nicht zuletzt aufgrund der neuen Struktur =
+gibt es einen gewissen Bedarf an Austausch. Auch so sollten wohl ein =
+paar Punkte besprochen werden.=20
+>=20
+> Wie sollen wir hier vorgehen? Uli willst du das koordinieren?
+>=20
+> Euch schonmal einen sch=C3=B6nen Start in die Woche!
+>=20
+> Viele Gr=C3=BC=C3=9Fe
+>=20
+> Olli
+>=20
+>=20
+>=20
+>=20
+>> Am 11.03.2023 um 20:53 schrieb Dr. von der Bey =
+<drvonderbey@gmail.com>:
+>>=20
+>> Lieber Ulli,
+>>=20
+>> vielen Dank f=C3=BCr die =C3=9Cbermittlung der Berichte. Ich werde =
+sie mir in den kommenden Tagen durchlesen und mich bei m=C3=B6glichen =
+Fragen an dich wenden!
+>>=20
+>> Dir ein sch=C3=B6nes Wochenende und danke f=C3=BCr deine =
+Zusammenfassung der Sitzung!
+>>=20
+>> Viele Gr=C3=BC=C3=9Fe
+>>=20
+>> Olli
+>>=20
+>>> Am 11.03.2023 um 12:54 schrieb Ulrich M=C3=BCller =
+<ulrich.gerhard.mueller@web.de>:
+>>>=20
+>>> <Notiz u=CC=88ber die Beiratssitzung in Ulm 10.pdf>
+>>=20
+>=20
+
+
+--Apple-Mail=_90C70908-30B0-4F57-87FA-293D60CDC6A7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" class=3D""><p =
+class=3D"MsoNormal">Liebe Mitgesellschafter,</p><p class=3D"MsoNormal">ich=
+ wei=C3=9F nicht, ob wir einer Gesellschafterversammlung unter =
+Anwesenheit bed=C3=BCrfen. Was w=C3=A4ren denn die Themen? Wer w=C3=BCnsch=
+t denn eine? Wer eine Gesellschafterversammlung w=C3=BCnscht, soll dann =
+bitte auch das Thema angeben, das er/sie behandelt haben m=C3=B6chte, =
+damit sich die anderen zu dem Thema auch schon Gedanken machen k=C3=B6nnen=
+. Derzeit habe ich auch noch keine Steuerbescheinigung, aus der der =
+Bruttobetrag und Nettobetrag der Gewinnauszahlung hervorgeht. Sicher =
+k=C3=B6nnen wir in dem Gesellschafterbeschluss die auszuzahlenden =
+Betr=C3=A4ge momentan noch gar nicht nennen. Was die Koordination einer =
+Gesellschafterversammlung anbelangt, darf das ruhig einmal jemand =
+anderes =C3=BCbernehmen. Nach der Satzung bedarf es zur Einberufung =
+einer Gesellschafterversammlung, die =C3=BCber die Ermittlung des =
+j=C3=A4hrlichen =C3=9Cberschusses hinausgeht, einer Zustimmung von 25% =
+der Stimmen.&nbsp;</p><div class=3D"">Viele Gr=C3=BC=C3=9Fe</div><div =
+class=3D""><br class=3D""></div><div class=3D"">Ulrich</div><div =
+class=3D""><br class=3D""></div><div><br class=3D""><blockquote =
+type=3D"cite" class=3D""><div class=3D"">Am 12.03.2023 um 20:05 schrieb =
+Dr. von der Bey &lt;<a href=3D"mailto:drvonderbey@gmail.com" =
+class=3D"">drvonderbey@gmail.com</a>&gt;:</div><br =
+class=3D"Apple-interchange-newline"><div class=3D""><div class=3D"">Liebe =
+Gesellschafter,<br class=3D""><br class=3D"">Ich hoffe, ihr habt ein =
+sch=C3=B6nes Wochenende! Ich habe mir die Berichte durchgelesen. <br =
+class=3D"">Im Gesellschaftervertrag steht ja, dass mit Bekanntgabe des =
+Ergebnisses eine Gesellschafterversammlung einzuberufen ist. Ich w=C3=BCrd=
+e das sehr begr=C3=BC=C3=9Fen. Nicht zuletzt aufgrund der neuen Struktur =
+gibt es einen gewissen Bedarf an Austausch. Auch so sollten wohl ein =
+paar Punkte besprochen werden. <br class=3D""><br class=3D"">Wie sollen =
+wir hier vorgehen? Uli willst du das koordinieren?<br class=3D""><br =
+class=3D"">Euch schonmal einen sch=C3=B6nen Start in die Woche!<br =
+class=3D""><br class=3D"">Viele Gr=C3=BC=C3=9Fe<br class=3D""><br =
+class=3D"">Olli<br class=3D""><br class=3D""><br class=3D""><br =
+class=3D""><br class=3D""><blockquote type=3D"cite" class=3D"">Am =
+11.03.2023 um 20:53 schrieb Dr. von der Bey &lt;<a =
+href=3D"mailto:drvonderbey@gmail.com" =
+class=3D"">drvonderbey@gmail.com</a>&gt;:<br class=3D""><br =
+class=3D"">Lieber Ulli,<br class=3D""><br class=3D"">vielen Dank f=C3=BCr =
+die =C3=9Cbermittlung der Berichte. Ich werde sie mir in den kommenden =
+Tagen durchlesen und mich bei m=C3=B6glichen Fragen an dich wenden!<br =
+class=3D""><br class=3D"">Dir ein sch=C3=B6nes Wochenende und danke f=C3=BC=
+r deine Zusammenfassung der Sitzung!<br class=3D""><br class=3D"">Viele =
+Gr=C3=BC=C3=9Fe<br class=3D""><br class=3D"">Olli<br class=3D""><br =
+class=3D""><blockquote type=3D"cite" class=3D"">Am 11.03.2023 um 12:54 =
+schrieb Ulrich M=C3=BCller &lt;<a =
+href=3D"mailto:ulrich.gerhard.mueller@web.de" =
+class=3D"">ulrich.gerhard.mueller@web.de</a>&gt;:<br class=3D""><br =
+class=3D"">&lt;Notiz u=CC=88ber die Beiratssitzung in Ulm 10.pdf&gt;<br =
+class=3D""></blockquote><br class=3D""></blockquote><br =
+class=3D""></div></div></blockquote></div><br class=3D""></body></html>=
+
+--Apple-Mail=_90C70908-30B0-4F57-87FA-293D60CDC6A7--

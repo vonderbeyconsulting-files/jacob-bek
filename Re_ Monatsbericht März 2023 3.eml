@@ -1,0 +1,148 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:a05:6214:2e03:b0:5f2:1e9b:60e1 with SMTP id mx3csp358578qvb;
+        Wed, 19 Apr 2023 07:24:04 -0700 (PDT)
+X-Google-Smtp-Source: AKy350Yq4vRKcHi9RS4263kGd7lhfkaYZvLMFMDxfqiNoG0tEIjyCrRLNvVUz5laeliIChONYjPa
+X-Received: by 2002:a17:907:ea6:b0:953:57a1:55e1 with SMTP id ho38-20020a1709070ea600b0095357a155e1mr2619112ejc.62.1681914244363;
+        Wed, 19 Apr 2023 07:24:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1681914244; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZVemGwJkZumckqWBhqBXdhs4tdIZ8u31+kR9EkdjLQ6p9IlZjsF2GXMu6CtbcW3Nbt
+         4ls3MGh1+tCYZ0Bk+Hr7UHsSwC9Xp1iT1FrfyqJdrUhJaoNRYNCc0rrf8gG6PWEJMN70
+         bRZTeFPAql5Urs2MG5vvpJwBEkr5vCg7YRi1J60peIEEog17zN6mk/1ADwa5Sq9q04t7
+         Pl1KYM2mh0y/EPeAzc/tjJRZ3R816VgTKORNdmggoCjQaAZlkhBG1XkQkAvwwowp+L0q
+         ic2ulIpQFFuaveGAxDhtcpgW467k+L46H91onpi5tgRds9X5Icbx8coBW+3RG9rlHfyH
+         RqHg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:references:message-id:cc:date:in-reply-to:from:subject
+         :mime-version;
+        bh=c6QQHij5LKb6NiTQ6kkfgbKoNyqDBPta+LiJ/phUmSg=;
+        b=a9THra/ewstUXcBL1md8X+fE4z3Oe9XS7GlhH1iCis3HCoN9p8INGgt0fv+lgLvdrN
+         c+sWSL5lpTEXCdy4zhtadM/KknsR4xTJMtaM1KI/9mp0JaQciLGNwrYoqjxJgwMAVDP+
+         4peMYirpEpcBPga4KUclmva3ZzfW1QNp+4iqx9R3bz655W9hS5JtFfUmlrdxN2nanJkJ
+         4IEBrsA0hnaXnllbzPGDJB5GIjeDPs2p22uoYXCgNZu6Lkr+CJ+X9xAe9CH2HfUiC4mM
+         4+lmtcCXhX9vH9EtsgI8t5Ilt5jlAeiDnUyCzbl3UgirfcqjAF5Cr1PeRnn1o8z1Jvan
+         8oGQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mueller_renate@bluewin.ch designates 195.186.227.132 as permitted sender) smtp.mailfrom=mueller_renate@bluewin.ch
+Return-Path: <mueller_renate@bluewin.ch>
+Received: from vimdzmsp-sfwd04.bluewin.ch (vimdzmsp-sfwd04.bluewin.ch. [195.186.227.132])
+        by mx.google.com with ESMTPS id u4-20020aa7db84000000b00504764c4d3csi13074893edt.541.2023.04.19.07.24.04
+        for <drvonderbey@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 19 Apr 2023 07:24:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mueller_renate@bluewin.ch designates 195.186.227.132 as permitted sender) client-ip=195.186.227.132;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mueller_renate@bluewin.ch designates 195.186.227.132 as permitted sender) smtp.mailfrom=mueller_renate@bluewin.ch
+Received: from renates-macbook-pro.home ([188.62.162.131])
+	by vimdzmsp-sfwd04.bluewin.ch Swisscom AG with ESMTPA
+	id p8j5pdl5hepE5p8j5p99Cw; Wed, 19 Apr 2023 16:24:04 +0200
+X-Bluewin-Spam-Analysis: v=2.4 cv=Tu+FOBbh c=1 sm=1 tr=0 ts=643ff984
+ a=s/cY2RuJvlCj+QQUoh5omQ==:117 a=s/cY2RuJvlCj+QQUoh5omQ==:17
+ a=5KLPUuaC_9wA:10 a=p8JusCiOk0ICvKG9QrkA:9 a=QEXdDO2ut3YA:10
+ a=Xc2zEEBNxukSSluO:21 a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10
+X-Bluewin-Spam-Score: 0.00
+X-FXIT-IP: IPv4[188.62.162.131] Epoch[1681914244]
+X-Bluewin-AuthAs: mueller_renate@bluewin.ch
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_D4B2469B-8117-4CC0-B2FD-E5472EF7BB89"
+Mime-Version: 1.0 (Mac OS X Mail 13.4 \(3608.120.23.2.7\))
+Subject: =?utf-8?Q?Re=3A_Monatsbericht_M=C3=A4rz_2023?=
+From: Renate Hoffmann <mueller_renate@bluewin.ch>
+X-Priority: 3
+In-Reply-To: <trinity-23facc4b-417d-48d8-abac-5dd7d0324acd-1681815055325@3c-app-webde-bap22>
+Date: Wed, 19 Apr 2023 16:24:03 +0200
+Cc: =?utf-8?B?IkFydGh1ciBNw7xsbGVyIERyLiBLLiI=?= <dr.k.a.mueller@t-online.de>,
+ "Dr. Werner von der Bey" <drvonderbey@gmail.com>,
+ =?utf-8?Q?Lara_L=C3=BChn?= <lara-luehn@hotmail.de>,
+ =?utf-8?Q?Alexia_L=C3=BChn?= <lexi-luehn@hotmail.de>
+Message-Id: <1B8CE22C-B5DA-455C-BA14-7E8D0946266C@bluewin.ch>
+References: <trinity-23facc4b-417d-48d8-abac-5dd7d0324acd-1681815055325@3c-app-webde-bap22>
+To: =?utf-8?Q?Ulrich_M=C3=BCller?= <ulrich.gerhard.mueller@web.de>
+X-Mailer: Apple Mail (2.3608.120.23.2.7)
+X-CMAE-Envelope: MS4xfBxNgkn64oWc9aYuLq9uNeeroI/MA28tojwUnf5PEBpKqtxdv/VtLFfmURVEnGo0TSWnjORqQ9D0fSrbEkB6oJ4fDMF25rMbrmKTUgHBBq9BMmQpV3Zx
+ /6aO+/8M2vYVKXe21i3LHecSVHY2rr9nN10EYGMeXuuUagj0qtTooYOjIv8lQoM9GlZmFGI6GRMC3QXNAVBB2zdA0O+kSezt74dGkkyfW9auoHeyZA4wkuuu
+ /OLtluH3IHCEQP8ZEj9Yi9gC94eQDMBAlRmcsTFmtmCoEBmWR/qjWGKYnylWPVX+jwefzD6SGq0gQKZfR7io5kVclnfMc0jGWQ2pyK29JqCGyND+0NkwgeVw
+ 1OQ6BU6M52mOzTXKmZhX+b/9UqNNNg==
+
+
+--Apple-Mail=_D4B2469B-8117-4CC0-B2FD-E5472EF7BB89
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Hallo Uli
+vielen dank f=C3=BCr den Monatsbericht f=C3=BCr M=C3=A4rz! All=C3=BCberall=
+ ist Arbeitskr=C3=A4ftemangel- wo kommen wir da bloss hin!
+Bei uns ist der Himmel gerade blau! Mal sehen f=C3=BCr wie lange!
+Sonnigen Nachmittag! Rene
+
+> Am 18.04.2023 um 12:50 schrieb Ulrich M=C3=BCller =
+<ulrich.gerhard.mueller@web.de>:
+>=20
+> Liebe MitgesellschafterInnen,
+> =20
+> anbei der Monatsbericht M=C3=A4rz 2023. Es wurde ein Gewinn von 1044 =
+T=E2=82=AC erzielt ohne Aufl=C3=B6sung von R=C3=BCckstellungen.
+> =20
+> Mit freundlichen Gr=C3=BC=C3=9Fen
+>=20
+> Ulrich G. M=C3=BCller
+> Joh.-Seb.-Bach-Str. 6
+>=20
+> 70771 Leinfelden-Echterdingen
+>=20
+> Tel.: 0711/752316
+> Fax: 0711/7505154
+> Ulrich.Gerhard.Mueller@web.de
+> Mobil: 0177 27 25 178
+> <Monatsbericht JB Ma=CC=88rz 2023.pdf>
+
+
+--Apple-Mail=_D4B2469B-8117-4CC0-B2FD-E5472EF7BB89
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" class=3D"">Hallo=
+ Uli<div class=3D"">vielen dank f=C3=BCr den Monatsbericht f=C3=BCr =
+M=C3=A4rz! All=C3=BCberall ist Arbeitskr=C3=A4ftemangel- wo kommen wir =
+da bloss hin!</div><div class=3D"">Bei uns ist der Himmel gerade blau! =
+Mal sehen f=C3=BCr wie lange!</div><div class=3D"">Sonnigen Nachmittag! =
+Rene<br class=3D""><div><br class=3D""><blockquote type=3D"cite" =
+class=3D""><div class=3D"">Am 18.04.2023 um 12:50 schrieb Ulrich M=C3=BCll=
+er &lt;<a href=3D"mailto:ulrich.gerhard.mueller@web.de" =
+class=3D"">ulrich.gerhard.mueller@web.de</a>&gt;:</div><br =
+class=3D"Apple-interchange-newline"><div class=3D""><div class=3D""><div =
+style=3D"font-family: Verdana;font-size: 12.0px;" class=3D""><div =
+class=3D""><span style=3D"font-family:Times New Roman,Times,serif;" =
+class=3D"">Liebe MitgesellschafterInnen,</span></div>
+
+<div class=3D"">&nbsp;</div>
+
+<div class=3D""><span style=3D"font-family:Times New Roman,Times,serif;" =
+class=3D"">anbei der Monatsbericht M=C3=A4rz 2023. Es wurde ein Gewinn =
+von 1044 T=E2=82=AC erzielt ohne Aufl=C3=B6sung von =
+R=C3=BCckstellungen.</span><br class=3D"">
+&nbsp;</div>
+
+<div class=3D"signature"><span style=3D"font-family:Times New =
+Roman,Times,serif;" class=3D"">Mit freundlichen Gr=C3=BC=C3=9Fen<br =
+class=3D"">
+<br class=3D"">
+Ulrich&nbsp;G.&nbsp;M=C3=BCller<br class=3D"">
+Joh.-Seb.-Bach-Str.&nbsp;6<br class=3D"">
+<br class=3D"">
+70771&nbsp;Leinfelden-Echterdingen<br class=3D"">
+<br class=3D"">
+Tel.:&nbsp;0711/752316<br class=3D"">
+Fax:&nbsp;0711/7505154<br class=3D"">
+<a href=3D"mailto:Ulrich.Gerhard.Mueller@web.de" =
+class=3D"">Ulrich.Gerhard.Mueller@web.de</a><br class=3D"">
+Mobil:&nbsp;0177&nbsp;27&nbsp;25&nbsp;178</span></div></div></div><span =
+id=3D"cid:CBFC04A6-86B7-4A88-8C3C-F1EBEEF2ED35@home">&lt;Monatsbericht =
+JB Ma=CC=88rz 2023.pdf&gt;</span></div></blockquote></div><br =
+class=3D""></div></body></html>=
+
+--Apple-Mail=_D4B2469B-8117-4CC0-B2FD-E5472EF7BB89--

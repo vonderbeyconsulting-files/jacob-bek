@@ -1,0 +1,101 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:ad4:452b:0:b0:5c6:b0d7:526f with SMTP id l11csp652438qvu;
+        Tue, 4 Apr 2023 06:30:30 -0700 (PDT)
+X-Google-Smtp-Source: AKy350ZkmyhcWFREO+Q35VgMr9HEWqWZp/Il6mCIBTMOTegYwDtcZcLmz6jqz36usB4hBJ3gYdcE
+X-Received: by 2002:adf:ce03:0:b0:2ce:a8f9:7cae with SMTP id p3-20020adfce03000000b002cea8f97caemr1845417wrn.53.1680615029871;
+        Tue, 04 Apr 2023 06:30:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1680615029; cv=none;
+        d=google.com; s=arc-20160816;
+        b=T5RtMSRXc+9RGqB4Hfy1+a72a64Pt/hCpID2+Qkthwl3MpVfxBYwrDFz9XbqbWPOO9
+         8ki9OgpfJgDIBw9irVKo7y4Q8go9Is/MKtj/htV0HnxSO3bxUcDscMUfOHRi8CdbPwhg
+         IoXMowb/nWohWuDvueV9ka/lN9k4C/ZaahPOnc8XnWpq/UNeJHWcjOmB0FNWAuuLQetA
+         NTyEXdOeuWZsDWklUlV+C1wm8MbjrTHEQT4NkawfVbxHHhd0nd0c4wmWHaXEo3saSCEw
+         pgHhNIKYw9avmPD+7s8jHG82tGTGqM0NztHhWQW/IOy6gFUhrPlocnSdf08sXKHqhXI8
+         16NA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:thread-index:content-transfer-encoding
+         :mime-version:message-id:date:subject:in-reply-to:references:cc:to
+         :from;
+        bh=B4YcQsT5QHYszMaTsFOTeUDIYD1K0Jk2P7J/wvCyctY=;
+        b=NKF/kaBnG7+tyhWUqrSu+z3cid7/Y2CnsO/Q6WTOVdedU+5nOVe1dXOSxyPhX0c7Ut
+         bBl1C1g9QIACCLdhEjXBaG6c9cZpkWU/qAk5swdj5zRrw00Ebi0ZMLwCWBJIJnAaSTUw
+         PjzhmgAobAAMsRGQbEGrfdTsDKDoAGjtOXva9PRXdcFpg5GEkskEB3cneleJT03o0uzB
+         J59lgDF5ALjeFXPfo9IrOFm+3GqDBP2dpguGEH7b0VXXs95v4CS2YcfDEeWEfdHXIkTK
+         /t1xbU6wrL+KjF7xIXxqnAcZ8bBGWw4fZSgNnJc6Py6tRMfLL8pNI1pxzQmLQfPPVV3E
+         hnRw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=none (google.com: t-online.de does not designate permitted sender hosts) smtp.mailfrom=dr.k.a.mueller@t-online.de
+Return-Path: <dr.k.a.mueller@t-online.de>
+Received: from mailout04.t-online.de (mailout04.t-online.de. [194.25.134.18])
+        by mx.google.com with ESMTPS id q7-20020adff507000000b002c70421851esi7655876wro.253.2023.04.04.06.30.29
+        for <drvonderbey@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 04 Apr 2023 06:30:29 -0700 (PDT)
+Received-SPF: none (google.com: t-online.de does not designate permitted sender hosts) client-ip=194.25.134.18;
+Authentication-Results: mx.google.com;
+       spf=none (google.com: t-online.de does not designate permitted sender hosts) smtp.mailfrom=dr.k.a.mueller@t-online.de
+Received: from fwd85.dcpf.telekom.de (fwd85.aul.t-online.de [10.223.144.111])
+	by mailout04.t-online.de (Postfix) with SMTP id 6B1A79395;
+	Tue,  4 Apr 2023 15:30:29 +0200 (CEST)
+Received: from USERVAIO ([94.31.105.149]) by fwd85.t-online.de
+	with (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384 encrypted)
+	esmtp id 1pjgk0-2LCvE80; Tue, 4 Apr 2023 15:30:28 +0200
+From: <dr.k.a.mueller@t-online.de>
+To: "'Dr. von der Bey'" <drvonderbey@gmail.com>,
+	=?UTF-8?Q?'Ulrich_M=C3=BCller'?= <ulrich.gerhard.mueller@web.de>
+Cc: =?UTF-8?Q?'Renate_Hoffmann-M=C3=BCller'?= <mueller_renate@bluewin.ch>,
+	=?UTF-8?Q?'Alexia_L=C3=BChn'?= <lexi-luehn@hotmail.de>,
+	=?UTF-8?Q?'Lara_L=C3=BChn'?= <lara-luehn@hotmail.de>
+References: <296F4A89-391A-43E0-BD10-E9DD66EF3736@web.de> <D89D7702-9639-4B1A-9C53-ABEA6A72CB3D@gmail.com>
+In-Reply-To: <D89D7702-9639-4B1A-9C53-ABEA6A72CB3D@gmail.com>
+Subject: AW: Ausgleichszahlung
+Date: Tue, 4 Apr 2023 15:30:30 +0200
+Message-ID: <007501d966f9$a0a41ce0$e1ec56a0$@t-online.de>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQJnnTstcFrP7aBWwqhWaZbolGEDTAFqEI8trfNncbA=
+Content-Language: de
+X-TOI-EXPURGATEID: 150726::1680615028-95FF8C52-16B26D86/0/0 CLEAN NORMAL
+X-TOI-MSGID: 78e5289d-e855-4f60-881b-edddeb33ee95
+
+Hallo Uli,
+auch bei mir ist das Geld eingetroffen,
+vielen Dank,
+ich gehe jetzt erst mal Brot und Wasser kaufen.
+Sch=C3=B6nen Tag noch an Alle     Arthur=09
+
+-----Urspr=C3=BCngliche Nachricht-----
+Von: Dr. von der Bey <drvonderbey@gmail.com>=20
+Gesendet: Montag, 3. April 2023 19:10
+An: Ulrich M=C3=BCller <ulrich.gerhard.mueller@web.de>
+Cc: Renate Hoffmann-M=C3=BCller <mueller_renate@bluewin.ch>; Arthur =
+M=C3=BCller <dr.k.a.mueller@t-online.de>; Alexia L=C3=BChn =
+<lexi-luehn@hotmail.de>; Lara L=C3=BChn <lara-luehn@hotmail.de>
+Betreff: Re: Ausgleichszahlung
+
+Hallo Uli,
+
+vielen Dank f=C3=BCr deine Info! Das Geld ist bereits eingegangen!
+
+viele Gr=C3=BC=C3=9Fe
+
+Olli
+
+> Am 03.04.2023 um 09:56 schrieb Ulrich M=C3=BCller =
+<ulrich.gerhard.mueller@web.de>:
+>=20
+> Liebe MitgesellschafterInnen,
+>=20
+> das Geld ist da! Es wird nachher =C3=BCberwiesen. 590 =E2=82=AC bei =
+25%. Die anderen die H=C3=A4lfte.
+>=20
+> Viele Gr=C3=BC=C3=9Fe
+>=20
+> Ulrich
+>=20
+> <IMG_7369.jpeg>.=20
+
+
