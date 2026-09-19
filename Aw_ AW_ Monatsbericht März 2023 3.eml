@@ -1,0 +1,198 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:ad4:4353:0:b0:5ee:59f:e900 with SMTP id q19csp2751956qvs;
+        Tue, 18 Apr 2023 05:46:19 -0700 (PDT)
+X-Google-Smtp-Source: AKy350ZGDnQ11gY+gTCbbt4InrXc8PrXoqvHnxTKgRgLetCZQHsjGy027BxhcLtWtgFbTYozdPDC
+X-Received: by 2002:a17:906:6d51:b0:94a:a419:f382 with SMTP id a17-20020a1709066d5100b0094aa419f382mr10771901ejt.12.1681821979627;
+        Tue, 18 Apr 2023 05:46:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1681821979; cv=none;
+        d=google.com; s=arc-20160816;
+        b=i7ohaFXnpSYT0NiQEV69zudg7OD2bXpuBMAiuKys0EWfQcTa3MDeYzU0zBrO4Xeu+6
+         Ka6wq5BWMWpYchDKTMKzM1qh4ltM38lGRFli5vSCMrFnpur4tNIHoiW+Efzl/BRuxlct
+         WX6dGj89j8l10dnAc5iaBukVY+Avf+VJzRd0yh5AODD2NHtSIT6eB7ZQ6eBnszz7uSfj
+         3aDgxgN06qWMDzkbW/OSFu8e0D0lWUDlTHEBAOzx53aa6AQgG87P3IYeWxFSGsfeY5up
+         /GMQbtbG02o6Bi/qsREb5hKnkPyKZjR+vIk/srxGQh4Tm/CRnUy3UiiLFkZSKs/WoQ2v
+         691Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=ui-outboundreport:references:in-reply-to:sensitivity:importance
+         :date:subject:cc:to:from:message-id:mime-version:dkim-signature;
+        bh=c066xpWo2DGgHubmxF7KsJTP/+rbl4FSVpcIwlm+Dhc=;
+        b=lqG4bI9ewhah/kcEctKjCEbOBt1kAEZnqwyC4tIJ8YDskXbbH2kJaBL8SqoPZ/c5Sw
+         rKGO8fcxXfp/S5urZIHnCq4nhnL+R7ymixzn57nr2Xh6daE8ZEG08UbifycyN2JaYIPE
+         8QtbNZV7mAqnNikW9x432CcToIkFmx16C/3j46oMUNv5BoV7wxu5MzmdfVXiyyJdAmCQ
+         775VQvjH1hdekHYafAO8+lkRt3jgk9rECGwghF+ZRKvvfX8uzGVYaIEbUYLj23tueIFP
+         toJKCfpPlo5YhZ+kYoV9tlQrMx6j9KxqVhRR95OPD/QF/G0//WSQ0KFjXYXr9OEKez8L
+         3d8A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=VSGFV+Cd;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=Ulrich.Gerhard.Mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+Return-Path: <Ulrich.Gerhard.Mueller@web.de>
+Received: from mout.web.de (mout.web.de. [212.227.17.11])
+        by mx.google.com with ESMTPS id eq21-20020a170907291500b0094f2e9ff85csi6109559ejc.541.2023.04.18.05.46.19
+        for <drvonderbey@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 18 Apr 2023 05:46:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) client-ip=212.227.17.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=VSGFV+Cd;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=Ulrich.Gerhard.Mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de; s=s29768273;
+	t=1681821978; i=ulrich.gerhard.mueller@web.de;
+	bh=Q+znJgPTzdd95jBWyXn7PK/O9zEEuxPJyU1/WBh6ny8=;
+	h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+	b=VSGFV+CdnNQFGsEvgRlBwPXSSGtEyv6FgMgA6Z7lNSqSISE9VP2AdZ1olfJ6Aw7v9
+	 A46wZ3CZ5KoqJ14YM4ucbNPl4Z3JQGPvske2BjVfYIuH+0eQ/iXEeicMzynrLVnpp1
+	 YpK+DclNeMID+vCs8jc9ZhIIDVkSJtzHWSdv4j4WBu3D+y4FKwQuAnd6HipU+ChDjO
+	 zsj1XZN9FgR1H4hBYh/fbOM3k9gVj4EIq1Qp1ArJLUgof1CLt4rfeMCl1BgCvhyLWl
+	 n6QgCVFOIndLQyNhy0C/ta3csG3KzCV8nRAFHEqTyaMSRA5i0cf5yvAbG5t65GLUxJ
+	 HHuXYhCI3MMYA==
+X-UI-Sender-Class: 814a7b36-bfc1-4dae-8640-3722d8ec6cd6
+Received: from [213.225.33.37] ([213.225.33.37]) by web-mail.web.de
+ (3c-app-webde-bap38.server.lan [172.19.172.38]) (via HTTP); Tue, 18 Apr
+ 2023 14:46:18 +0200
+MIME-Version: 1.0
+Message-ID: <trinity-12469379-0093-46b6-8e9d-56618aa52a9f-1681821978770@3c-app-webde-bap38>
+From: =?UTF-8?Q?Ulrich_M=C3=BCller?= <Ulrich.Gerhard.Mueller@web.de>
+To: Werner Olli von der Bey <drvonderbey@gmail.com>
+Cc: Renate Mueller <mueller_renate@bluewin.ch>,
+ =?UTF-8?Q?Arthur_M=C3=BCller?= <dr.k.a.mueller@t-online.de>,
+ =?UTF-8?Q?Lara_L=C3=BChn?= <lara-luehn@hotmail.de>,
+ =?UTF-8?Q?Alexia_L=C3=BChn?= <lexi-luehn@hotmail.de>
+Subject: =?UTF-8?Q?Aw=3A_AW=3A_Monatsbericht_M=C3=A4rz_2023?=
+Content-Type: text/html; charset=UTF-8
+Date: Tue, 18 Apr 2023 14:46:18 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <43621C2D-0E8D-46FE-A175-9633E54F8F23@hxcore.ol>
+References: <trinity-23facc4b-417d-48d8-abac-5dd7d0324acd-1681815055325@3c-app-webde-bap22>
+ <43621C2D-0E8D-46FE-A175-9633E54F8F23@hxcore.ol>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K1:vsv/pwlc9A9/QkKqcVmxdXmEZow/QlyTOQYzyRxEfk6B2AXdZHFwL4uty1k1gjNy2FOB3
+ twWHIz5EYYqKuTsIQd+zbNliVq8K91fkFYAPNjNgYbcjJndz7Q5fOiNXsUdEFxT+qYuz9+iPQgFj
+ HfCXSQGxeiDyLRqZsdcykarpjkY46uHtcP3oBdrfHRmBbcOgyI47Tf2SeWY+XRSfHUucrhyYZUsn
+ NtNevl7cwtgarEWj8ZUtizjv8zndFOEsERILu2njPPF9FjGh+eXNBPethj3BUgiYPmjr8ZbRUtLO
+ hs=
+X-Spam-Flag: NO
+UI-OutboundReport: notjunk:1;M01:P0:Tgj3Dnfi3m4=;Potk04NzsaQWGS/9CtnP6QigLPL
+ 2mj9M7Vl5NM6epW7qsDfwOdSFxry5W91K9Lz9vlnJMEn/ItXhd4cAZlxbLjn5P4hp4vgJQg62
+ QVF/4OkASOi14UTPprEJLOpBmxlLfaHjLKCbMP0RtyNDMotczKP6+hoZZ4kl3IJX+Uai4gm7g
+ gdGydEfamnofoVwMwhjD7RWnenedN/qnyDzhAyafwjfMbRn12asxSlL/c5Hsvnp/ONHx9nS0e
+ 9yekILTyM6Zbr43D2YmdkPD6+kca1wyzc8Pe0J8vlpRarYdAv3yyX+GCA0YA3rBxbQtdD+i42
+ +uOtmvpHygJP+rLLj3IaaaupiLc38GINPfo7UwlIf05yU9LLn0Lr4du22Ke6Ct/iWe5soEwDl
+ /sVbBohweevuVJLh6inCxB3hesIokeLoAznrDoqQlT8bqJ5f+McOEGgt1IDF/WZ7qwMn1lwE6
+ 5TkLSForWcApC5+AlknvTTcAZ72UokmcV8ajBXy0juXrJpRDfQQGJfDcOBC3O/GIuENbhHu1B
+ EWsgCo9JA5qfCLPWUWdX40Grdd0U8iCZm0QHUocaR0Sk60d1vZ4fYIMC/2nGzEzo5zZWv7GqI
+ CniHe1kkfXkce5oNn3GlZDt3qyN/j+KF03vddKgobo7mXTFGILw2PLwjmzKRxzfoIoXRA26kM
+ yD+NoTGAGPUa+qluLWHCLpWzced9EGkSFN28sgVSj3WrPc4DoBHbJf9vM0s4j0e/uc07f5V2c
+ idSUEoLkVkcOnBYwvj5a+768Mwytw3lPby3SSAfGPd4wvQbW00Tq7lh5lg0GLvEtLRXzgHfej
+ Cy7WNPuU8n2ro+DQV3fQM7Lrsg/GWH5ZHrdM9mGkriYqw=
+
+<html><head></head><body><div style="font-family: Verdana;font-size: 12.0px;"><div><span style="font-family:Times New Roman,Times,serif;">Ich habe eben bei Frau Handke angefragt, ob die Probleme mit der neuen Maschine behoben seien. Die maschinellen Probleme seien so gut wie behoben. Aber es fehlt momentan an Personal und momentan sind auch relativ viele Mitarbeiter krank. Es wird deshalb auch mit Aushilfen und Samstagsarbeit gearbeitet. Die neu eingestellten Mitarbeiter k&ouml;nnen nicht gleich eingesetzt werden, da die K&uuml;ndigungsfristen bei deren jetzigen Arbeitgeber noch zu ber&uuml;cksichtigen sind. Der Arbeitsmarkt in Ulm und Umgebung ist leer gefegt. </span><br/>
+&nbsp;</div>
+
+<div class="signature"><span style="font-family:Times New Roman,Times,serif;">Mit freundlichen Gr&uuml;&szlig;en<br/>
+<br/>
+Ulrich&nbsp;G.&nbsp;M&uuml;ller<br/>
+Joh.-Seb.-Bach-Str.&nbsp;6<br/>
+<br/>
+70771&nbsp;Leinfelden-Echterdingen<br/>
+<br/>
+Tel.:&nbsp;0711/752316<br/>
+Fax:&nbsp;0711/7505154<br/>
+Ulrich.Gerhard.Mueller@web.de<br/>
+Mobil:&nbsp;0177&nbsp;27&nbsp;25&nbsp;178</span></div>
+
+<div>&nbsp;
+<div>&nbsp;
+<div name="quote" style="margin:10px 5px 5px 10px; padding: 10px 0 10px 10px; border-left:2px solid #C3D9E5; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="margin:0 0 10px 0;"><b>Gesendet:</b>&nbsp;Dienstag, 18. April 2023 um 14:37 Uhr<br/>
+<b>Von:</b>&nbsp;&quot;Werner Olli von der Bey&quot; &lt;drvonderbey@gmail.com&gt;<br/>
+<b>An:</b>&nbsp;&quot;Ulrich M&uuml;ller&quot; &lt;Ulrich.Gerhard.Mueller@web.de&gt;, &quot;Renate Mueller&quot; &lt;mueller_renate@bluewin.ch&gt;, &quot;Arthur M&uuml;ller&quot; &lt;dr.k.a.mueller@t-online.de&gt;, &quot;Lara L&uuml;hn&quot; &lt;lara-luehn@hotmail.de&gt;, &quot;Alexia L&uuml;hn&quot; &lt;lexi-luehn@hotmail.de&gt;<br/>
+<b>Betreff:</b>&nbsp;AW: Monatsbericht M&auml;rz 2023</div>
+
+<div name="quoted-content"><!--p.MsoNormal, li.MsoNormal, div.MsoNormal {
+	margin: 0.0cm;
+	font-size: 11.0pt;
+	font-family: Calibri , sans-serif;
+}
+a:link, span.MsoHyperlink {
+	color: blue;
+	text-decoration: underline;
+}
+*.MsoChpDefault {
+}
+div.WordSection1 {
+	page: WordSection1;
+}
+-->
+<div>
+<div class="WordSection1">
+<p class="MsoNormal">Hallo Uli,</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">vielen Dank f&uuml;r den Bericht! Entspricht das Ergebnis den Erwartungen? Ich schau mir den Bericht noch genauer an, aber eventuell kannst du noch etwas dazu sagen, wie es so l&auml;uft!</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">p.s. Bez&uuml;glich der Gesellschafterversammlung melde ich mich nochmal!</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">viele Gr&uuml;&szlig;e</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Olli</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Gesendet von <a href="https://go.microsoft.com/fwlink/?LinkId=550986" target="_blank">Mail</a> f&uuml;r Windows</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<div style="border: none;border-top: solid rgb(225,225,225) 1.0pt;padding: 3.0pt 0.0cm 0.0cm 0.0cm;">
+<p class="MsoNormal" style="border: none;padding: 0.0cm;"><b>Von: </b><a href="mailto:Ulrich.Gerhard.Mueller@web.de" onclick="parent.window.location.href=&#39;mailto:Ulrich.Gerhard.Mueller@web.de&#39;; return false;" target="_blank">Ulrich M&uuml;ller</a><br/>
+<b>Gesendet: </b>Dienstag, 18. April 2023 12:51<br/>
+<b>An: </b><a href="mailto:mueller_renate@bluewin.ch" onclick="parent.window.location.href=&#39;mailto:mueller_renate@bluewin.ch&#39;; return false;" target="_blank">Renate Mueller</a>; <a href="mailto:dr.k.a.mueller@t-online.de" onclick="parent.window.location.href=&#39;mailto:dr.k.a.mueller@t-online.de&#39;; return false;" target="_blank">Arthur M&uuml;ller</a>; <a href="mailto:drvonderbey@gmail.com" onclick="parent.window.location.href=&#39;mailto:drvonderbey@gmail.com&#39;; return false;" target="_blank">Dr. von der Bey</a>; <a href="mailto:lara-luehn@hotmail.de" onclick="parent.window.location.href=&#39;mailto:lara-luehn@hotmail.de&#39;; return false;" target="_blank">Lara L&uuml;hn</a>; <a href="mailto:lexi-luehn@hotmail.de" onclick="parent.window.location.href=&#39;mailto:lexi-luehn@hotmail.de&#39;; return false;" target="_blank">Alexia L&uuml;hn</a><br/>
+<b>Betreff: </b>Monatsbericht M&auml;rz 2023</p>
+</div>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<div>
+<div>
+<p class="MsoNormal"><span style="font-size: 9.0pt;font-family: &quot;Times New Roman&quot; , serif;">Liebe MitgesellschafterInnen,</span></p>
+</div>
+
+<div>
+<p class="MsoNormal"><span style="font-size: 9.0pt;font-family: Verdana , sans-serif;">&nbsp;</span></p>
+</div>
+
+<div>
+<p class="MsoNormal"><span style="font-size: 9.0pt;font-family: &quot;Times New Roman&quot; , serif;">anbei der Monatsbericht M&auml;rz 2023. Es wurde ein Gewinn von 1044 T&euro; erzielt ohne Aufl&ouml;sung von R&uuml;ckstellungen.</span><br/>
+<span style="font-size: 9.0pt;font-family: Verdana , sans-serif;">&nbsp;</span></p>
+</div>
+</div>
+
+<p class="MsoNormal"><span style="font-size: 9.0pt;font-family: &quot;Times New Roman&quot; , serif;">Mit freundlichen Gr&uuml;&szlig;en<br/>
+<br/>
+Ulrich&nbsp;G.&nbsp;M&uuml;ller<br/>
+Joh.-Seb.-Bach-Str.&nbsp;6<br/>
+<br/>
+70771&nbsp;Leinfelden-Echterdingen<br/>
+<br/>
+Tel.:&nbsp;0711/752316<br/>
+Fax:&nbsp;0711/7505154<br/>
+Ulrich.Gerhard.Mueller@web.de<br/>
+Mobil:&nbsp;0177&nbsp;27&nbsp;25&nbsp;178</span></p>
+
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></body></html>

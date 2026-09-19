@@ -1,0 +1,297 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:a05:6214:2e03:b0:5f2:1e9b:60e1 with SMTP id mx3csp319714qvb;
+        Wed, 19 Apr 2023 06:29:52 -0700 (PDT)
+X-Google-Smtp-Source: AKy350ZRXdSCAWBEOOjWUoJqshAGaUmLfQq6WQm1Oildu94AjzmEGOuSU5608JgoGTb0Vlnox/6v
+X-Received: by 2002:adf:e74d:0:b0:2f9:cee4:b8e with SMTP id c13-20020adfe74d000000b002f9cee40b8emr4691179wrn.68.1681910992254;
+        Wed, 19 Apr 2023 06:29:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1681910992; cv=none;
+        d=google.com; s=arc-20160816;
+        b=siOTvqpX+lzQi3t9PPCmGsJUJUQq/15hCzuHGFFyH5EWcl4OmhDXIRYJm9dQwMS+U1
+         e0CfD/12jsHl7H2TYSH4F+2drMXlgpzTJ7FP3QqfygSEysb+x1WI8MLZcXm2Z3/UOXVv
+         z/zoLOIObjx9UZ13PBbEMOshBNPEZ2TRepiJM8E67wJ9+4lo/hpXEpSsz4g2yfrYU1ta
+         ZKKjjCWFTEXsocYz6+Uf2fLwpk5ZOhM7fr/D+e9uAjgp4Us9Uen/RmxwDahy8nR7T/EX
+         sAU4Fl2q9YW2xZD8duGDQikDTCeFGyLs7/AU/DSIdk8i852bfjkzD9fsZz4iCGfRT656
+         Gexw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :in-reply-to:references:to:from;
+        bh=5NkwJoHm4Rvp0+w+ZGQYxW0bsgqHQa1i5i+ed4HFQ6w=;
+        b=c437xa13/vJqxQtX7fegcYX3M9r/8v8cNSAmbXLXfvihvS6FH5fXNsPzi2ENHjm+ou
+         7Ez6tsaEp1c9z14//PJUrsDBHi/v+k0UKikjNn8NsKeliqbDYO8O/r2E2myjqPzEJ3Wq
+         vuuKFIHZw16D7+cZwckga0FeXrpcnP0m6+6JODOcYiIVuiqvRW9jcht+GlOuKSt44eSJ
+         Prse0RpwtGHdyeSs+SMvMvH/UqYceqmfcIomCS01HpNYrvfRRhT4z9WgOAay64Af4e90
+         OqvUWUXDwuVNmEFN0EsFEgHR9T61AeHFgGNNMc45nd7Fgn4ZQ2LsJjN5DI2iXnzWOqJm
+         FdEw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=none (google.com: t-online.de does not designate permitted sender hosts) smtp.mailfrom=dr.k.a.mueller@t-online.de
+Return-Path: <dr.k.a.mueller@t-online.de>
+Received: from mailout12.t-online.de (mailout12.t-online.de. [194.25.134.22])
+        by mx.google.com with ESMTPS id x9-20020a5d6b49000000b002cf8a341197si12390310wrw.378.2023.04.19.06.29.52
+        for <drvonderbey@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 19 Apr 2023 06:29:52 -0700 (PDT)
+Received-SPF: none (google.com: t-online.de does not designate permitted sender hosts) client-ip=194.25.134.22;
+Authentication-Results: mx.google.com;
+       spf=none (google.com: t-online.de does not designate permitted sender hosts) smtp.mailfrom=dr.k.a.mueller@t-online.de
+Received: from fwd70.dcpf.telekom.de (fwd70.aul.t-online.de [10.223.144.96])
+	by mailout12.t-online.de (Postfix) with SMTP id A136916517;
+	Wed, 19 Apr 2023 15:29:51 +0200 (CEST)
+Received: from THINKPAD ([94.31.104.149]) by fwd70.t-online.de
+	with (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384 encrypted)
+	esmtp id 1pp7sc-2oZa2i0; Wed, 19 Apr 2023 15:29:50 +0200
+From: =?UTF-8?Q?Dr._K._A._M=C3=BCller?= <dr.k.a.mueller@t-online.de>
+To: "'Werner Olli von der Bey'" <drvonderbey@gmail.com>,
+	=?UTF-8?Q?'Ulrich_M=C3=BCller'?= <Ulrich.Gerhard.Mueller@web.de>,
+	"'Renate Mueller'" <mueller_renate@bluewin.ch>,
+	=?UTF-8?Q?'Lara_L=C3=BChn'?= <lara-luehn@hotmail.de>,
+	=?UTF-8?Q?'Alexia_L=C3=BChn'?= <lexi-luehn@hotmail.de>
+References: <trinity-23facc4b-417d-48d8-abac-5dd7d0324acd-1681815055325@3c-app-webde-bap22> <43621C2D-0E8D-46FE-A175-9633E54F8F23@hxcore.ol>
+In-Reply-To: <43621C2D-0E8D-46FE-A175-9633E54F8F23@hxcore.ol>
+Subject: =?UTF-8?Q?AW:_Monatsbericht_M=C3=A4rz_2023?=
+Date: Wed, 19 Apr 2023 15:29:50 +0200
+Message-ID: <005701d972c3$04af5950$0e0e0bf0$@t-online.de>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0058_01D972D3.C8393AC0"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQKJNdJwFlL9ujVp7QDR8FrXfK6HrgK52rARrb1KLEA=
+Content-Language: de
+X-TOI-EXPURGATEID: 150726::1681910990-DCD41C15-6CFB1E70/0/0 CLEAN NORMAL
+X-TOI-MSGID: c5ba0036-f449-4946-9629-f8484b3f3f9f
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0058_01D972D3.C8393AC0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Uli,
+
+vielen Dank f=C3=BCr den neuen Monatsbericht, ich werde ihn gewissenhaft =
+studieren.
+
+Die Situation auf dem Ulmer Arbeitsmarkt ist ja dramatisch, was soll da =
+aus ganz Deutschland noch werden.
+
+Wir brauchen Zuwanderung, aber nicht nur Einwanderung in die =
+Sozialsysteme.
+
+Sch=C3=B6nen Nachmittag   Arthur   =20
+
+=20
+
+Von: Werner Olli von der Bey <drvonderbey@gmail.com>=20
+Gesendet: Dienstag, 18. April 2023 14:38
+An: Ulrich M=C3=BCller <Ulrich.Gerhard.Mueller@web.de>; Renate Mueller =
+<mueller_renate@bluewin.ch>; Arthur M=C3=BCller =
+<dr.k.a.mueller@t-online.de>; Lara L=C3=BChn <lara-luehn@hotmail.de>; =
+Alexia L=C3=BChn <lexi-luehn@hotmail.de>
+Betreff: AW: Monatsbericht M=C3=A4rz 2023
+
+=20
+
+Hallo Uli,
+
+=20
+
+vielen Dank f=C3=BCr den Bericht! Entspricht das Ergebnis den =
+Erwartungen? Ich schau mir den Bericht noch genauer an, aber eventuell =
+kannst du noch etwas dazu sagen, wie es so l=C3=A4uft!
+
+=20
+
+p.s. Bez=C3=BCglich der Gesellschafterversammlung melde ich mich =
+nochmal!
+
+=20
+
+viele Gr=C3=BC=C3=9Fe
+
+=20
+
+Olli
+
+=20
+
+Gesendet von Mail <https://go.microsoft.com/fwlink/?LinkId=3D550986>  =
+f=C3=BCr Windows
+
+=20
+
+Von: Ulrich M=C3=BCller <mailto:Ulrich.Gerhard.Mueller@web.de>=20
+Gesendet: Dienstag, 18. April 2023 12:51
+An: Renate Mueller <mailto:mueller_renate@bluewin.ch> ; Arthur =
+M=C3=BCller <mailto:dr.k.a.mueller@t-online.de> ; Dr. von der Bey =
+<mailto:drvonderbey@gmail.com> ; Lara L=C3=BChn =
+<mailto:lara-luehn@hotmail.de> ; Alexia L=C3=BChn =
+<mailto:lexi-luehn@hotmail.de>=20
+Betreff: Monatsbericht M=C3=A4rz 2023
+
+=20
+
+Liebe MitgesellschafterInnen,
+
+=20
+
+anbei der Monatsbericht M=C3=A4rz 2023. Es wurde ein Gewinn von 1044 =
+T=E2=82=AC erzielt ohne Aufl=C3=B6sung von R=C3=BCckstellungen.
+=20
+
+Mit freundlichen Gr=C3=BC=C3=9Fen
+
+Ulrich G. M=C3=BCller
+Joh.-Seb.-Bach-Str. 6
+
+70771 Leinfelden-Echterdingen
+
+Tel.: 0711/752316
+Fax: 0711/7505154
+Ulrich.Gerhard.Mueller@web.de <mailto:Ulrich.Gerhard.Mueller@web.de>=20
+Mobil: 0177 27 25 178
+
+=20
+
+
+------=_NextPart_000_0058_01D972D3.C8393AC0
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta =
+http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><meta =
+name=3DGenerator content=3D"Microsoft Word 15 (filtered =
+medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.E-MailFormatvorlage19
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.E-MailFormatvorlage20
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DDE link=3Dblue =
+vlink=3D"#954F72"><div class=3DWordSection1><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:EN-US'>Hallo Uli,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'>vielen Dank =
+f=C3=BCr den neuen Monatsbericht, ich werde ihn gewissenhaft =
+studieren.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:EN-US'>Die Situation auf dem Ulmer =
+Arbeitsmarkt ist ja dramatisch, was soll da aus ganz Deutschland noch =
+werden.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:EN-US'>Wir brauchen Zuwanderung, aber =
+nicht nur Einwanderung in die Sozialsysteme.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+style=3D'mso-fareast-language:EN-US'>Sch=C3=B6nen Nachmittag=C2=A0=C2=A0 =
+Arthur=C2=A0=C2=A0=C2=A0 <o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p><div><di=
+v style=3D'border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm'><p class=3DMsoNormal><b>Von:</b> Werner Olli von der Bey =
+&lt;drvonderbey@gmail.com&gt; <br><b>Gesendet:</b> Dienstag, 18. April =
+2023 14:38<br><b>An:</b> Ulrich M=C3=BCller =
+&lt;Ulrich.Gerhard.Mueller@web.de&gt;; Renate Mueller =
+&lt;mueller_renate@bluewin.ch&gt;; Arthur M=C3=BCller =
+&lt;dr.k.a.mueller@t-online.de&gt;; Lara L=C3=BChn =
+&lt;lara-luehn@hotmail.de&gt;; Alexia L=C3=BChn =
+&lt;lexi-luehn@hotmail.de&gt;<br><b>Betreff:</b> AW: Monatsbericht =
+M=C3=A4rz 2023<o:p></o:p></p></div></div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Hallo =
+Uli,<o:p></o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p =
+class=3DMsoNormal>vielen Dank f=C3=BCr den Bericht! Entspricht das =
+Ergebnis den Erwartungen? Ich schau mir den Bericht noch genauer an, =
+aber eventuell kannst du noch etwas dazu sagen, wie es so =
+l=C3=A4uft!<o:p></o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p =
+class=3DMsoNormal>p.s. Bez=C3=BCglich der Gesellschafterversammlung =
+melde ich mich nochmal!<o:p></o:p></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>viele =
+Gr=C3=BC=C3=9Fe<o:p></o:p></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p =
+class=3DMsoNormal>Olli<o:p></o:p></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Gesendet von =
+<a href=3D"https://go.microsoft.com/fwlink/?LinkId=3D550986">Mail</a> =
+f=C3=BCr Windows<o:p></o:p></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><div =
+style=3D'border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm'><p class=3DMsoNormal><b>Von: </b><a =
+href=3D"mailto:Ulrich.Gerhard.Mueller@web.de">Ulrich =
+M=C3=BCller</a><br><b>Gesendet: </b>Dienstag, 18. April 2023 =
+12:51<br><b>An: </b><a href=3D"mailto:mueller_renate@bluewin.ch">Renate =
+Mueller</a>; <a href=3D"mailto:dr.k.a.mueller@t-online.de">Arthur =
+M=C3=BCller</a>; <a href=3D"mailto:drvonderbey@gmail.com">Dr. von der =
+Bey</a>; <a href=3D"mailto:lara-luehn@hotmail.de">Lara L=C3=BChn</a>; <a =
+href=3D"mailto:lexi-luehn@hotmail.de">Alexia =
+L=C3=BChn</a><br><b>Betreff: </b>Monatsbericht M=C3=A4rz =
+2023<o:p></o:p></p></div><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><div><div><p =
+class=3DMsoNormal><span style=3D'font-size:9.0pt;font-family:"Times New =
+Roman",serif'>Liebe MitgesellschafterInnen,</span><span =
+style=3D'font-size:9.0pt;font-family:"Verdana",sans-serif'><o:p></o:p></s=
+pan></p></div><div><p class=3DMsoNormal><span =
+style=3D'font-size:9.0pt;font-family:"Verdana",sans-serif'>&nbsp;<o:p></o=
+:p></span></p></div><div><p class=3DMsoNormal><span =
+style=3D'font-size:9.0pt;font-family:"Times New Roman",serif'>anbei der =
+Monatsbericht M=C3=A4rz 2023. Es wurde ein Gewinn von 1044 T=E2=82=AC =
+erzielt ohne Aufl=C3=B6sung von R=C3=BCckstellungen.</span><span =
+style=3D'font-size:9.0pt;font-family:"Verdana",sans-serif'><br>&nbsp;<o:p=
+></o:p></span></p></div></div><p class=3DMsoNormal><span =
+style=3D'font-size:9.0pt;font-family:"Times New Roman",serif'>Mit =
+freundlichen =
+Gr=C3=BC=C3=9Fen<br><br>Ulrich&nbsp;G.&nbsp;M=C3=BCller<br>Joh.-Seb.-Bach=
+-Str.&nbsp;6<br><br>70771&nbsp;Leinfelden-Echterdingen<br><br>Tel.:&nbsp;=
+0711/752316<br>Fax:&nbsp;0711/7505154<br><a =
+href=3D"mailto:Ulrich.Gerhard.Mueller@web.de">Ulrich.Gerhard.Mueller@web.=
+de</a><br>Mobil:&nbsp;0177&nbsp;27&nbsp;25&nbsp;178</span><span =
+style=3D'font-size:9.0pt;font-family:"Verdana",sans-serif'><o:p></o:p></s=
+pan></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
+------=_NextPart_000_0058_01D972D3.C8393AC0--
+
