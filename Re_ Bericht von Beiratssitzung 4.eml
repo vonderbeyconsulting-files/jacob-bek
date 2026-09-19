@@ -1,0 +1,153 @@
+Delivered-To: drvonderbey@gmail.com
+Received: by 2002:a0c:f70c:0:b0:570:2883:8d89 with SMTP id w12csp905344qvn;
+        Sun, 12 Mar 2023 10:10:56 -0700 (PDT)
+X-Google-Smtp-Source: AK7set8t7fstVhkBdAJdybT8x+Jm+gu0nFLXyUMy2OZKT8m/Tgp+GuIEL2lmBium2LD1IKTjk+yc
+X-Received: by 2002:a05:600c:198f:b0:3ea:f6c4:5f26 with SMTP id t15-20020a05600c198f00b003eaf6c45f26mr8302450wmq.17.1678641056619;
+        Sun, 12 Mar 2023 10:10:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1678641056; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QajARiSXW+LiOcQ4D4XooG0v3iJ0K2wNCvuB8ABYJCIEFSLbbOtmkJLj3o41ZHiT2j
+         AlLqHZNeuOvsoBqPhdHxVXjfF5MX+QtvrFUF9weHepGE0u+zPcrz9DrUcUiB0PvhwjUy
+         OWa3yGV0gci42kg2L3mYAOcF6dLb+X4eie9sG/WtTS1DzHfNbiBkoej0xUaw9ZGUiycM
+         837Y3LTvrL+BsKJedlRpD+o0IBjs2UlgkyR3KMT/kJS1ap7miDM2/B4ZNAiH0KjoNSaV
+         v8q11HK9R0n4E65aaslZ2taUhboMplZcLBQ6UCSI1jHQQybCrBSW7MvyzzgjMWJyx5G0
+         9fhQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=ui-outboundreport:to:in-reply-to:references:message-id:date:subject
+         :mime-version:from:content-transfer-encoding:dkim-signature;
+        bh=T7ZrH99FHcqSIOduDWXlFdsclr0uez370OHZHNB7+7k=;
+        b=PQ5DbPJKU/okOlKSg14XOh6SImRFLizuJyKP+pK6xZ9QIyoxzKp1cKjEBWwgMbCPXs
+         tlPkWIbh/TwrWvy7I1GHuECqZ2XuKXwjHFhXmBpzlMlQgbmrG9aNoSLISI+33srkELzn
+         YusKs1ByBQau4iQrVPfJNJ1F60V/rOw48/bv9auYJ0SaH802XFjaq2TEIVDdE7Pod2UR
+         Qwymi+G5EHRjGW0Gd3BgGjnKYB1bqGthcpYYH6lAAk/oILRmjAJJywnf8gi3vlTlxvYE
+         H6MWJN3Tu5wBQUFz7bZvQjaL3j+LfEH7+zt4p3ynJd54SA2cd8BQROmc4YbSfa+KZj2e
+         FWRw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=N14pcGbb;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=ulrich.gerhard.mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+Return-Path: <ulrich.gerhard.mueller@web.de>
+Received: from mout.web.de (mout.web.de. [212.227.17.11])
+        by mx.google.com with ESMTPS id s4-20020a5d6a84000000b002c70eebe565si4731757wru.314.2023.03.12.10.10.56
+        for <drvonderbey@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 12 Mar 2023 10:10:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) client-ip=212.227.17.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@web.de header.s=s29768273 header.b=N14pcGbb;
+       spf=pass (google.com: domain of ulrich.gerhard.mueller@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=ulrich.gerhard.mueller@web.de;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=web.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de; s=s29768273;
+	t=1678641056; i=ulrich.gerhard.mueller@web.de;
+	bh=ck/ZB7AW0gzcCDzl95aFpFbz1jSvbou3dk/N3Vc1FZI=;
+	h=X-UI-Sender-Class:From:Subject:Date:References:In-Reply-To:To;
+	b=N14pcGbb3UpVTtCznAOiknxrGARcx8PgXsK/jMAYUr1KjjePGBgDZuWe5vLXMCCpI
+	 FyAock3P4iqEUhEvG1V6Akz9GQDkDuRtxxiLa1U45UEQtaphJMlfd0UhfCL03Ty7UZ
+	 nTmrknAPWiynzrV+cnfZ6xQPmNDzVIAHpwvCnjrG8akDDMSl5GGKinj28viMlGqwKU
+	 lqw5rsvLoIhSFfDr0eteswWc28TAGRVVASjZDc1YWevrAVXB1hJmTtvYYX0wJ6tteP
+	 jQMu20s81Bo1BitLu9o+w6AwVUtgPxssnfdsO5aLgL6xLVsyszFrxaZruZo+eqj0Md
+	 rlb23Tftcsb5g==
+X-UI-Sender-Class: 814a7b36-bfc1-4dae-8640-3722d8ec6cd6
+Received: from smtpclient.apple ([88.75.11.4]) by smtp.web.de (mrweb106
+ [213.165.67.124]) with ESMTPSA (Nemesis) id 1MBS6v-1pgfLL0Fax-00CiH4 for
+ <drvonderbey@gmail.com>; Sun, 12 Mar 2023 18:10:56 +0100
+Content-Type: multipart/alternative; boundary=Apple-Mail-B9F7B8EE-1FB9-4778-BCDD-EFADA4A43DD1
+Content-Transfer-Encoding: 7bit
+From: =?utf-8?Q?Ulrich_M=C3=BCller?= <ulrich.gerhard.mueller@web.de>
+Mime-Version: 1.0 (1.0)
+Subject: Re: Bericht von Beiratssitzung
+Date: Sun, 12 Mar 2023 18:10:45 +0100
+Message-Id: <6932726F-7158-4EE4-9BF5-3A04824CCEC8@web.de>
+References: <B644FFAC-BEF7-486E-975C-4AF489816EEC@gmail.com>
+In-Reply-To: <B644FFAC-BEF7-486E-975C-4AF489816EEC@gmail.com>
+To: "Dr. von der Bey" <drvonderbey@gmail.com>
+X-Mailer: iPad Mail (20D67)
+X-Provags-ID: V03:K1:DPoNR01fFOv3dfhQMdD0D2x5dSB31KUzux80o6NUlB5wHJuRDWL
+ K5JYkDk+GnCipGkdXrWHP8W4wYtgd/VhtXiliVe4XVY9YDg1IOpV13SIFGBeLMqXrdxG4e3
+ IcyzC5maDOiOZnh75Z7DnFMjuLv40ZSVNW9Dmcl5qwsv7/Vt6fG1jlfUgFoBWkqaWkDUuHC
+ TAd8WsdAqDxDBnUkKLvOA==
+X-Spam-Flag: NO
+UI-OutboundReport: notjunk:1;M01:P0:0p+w9hbDxQ0=;ZGiDFUmrBqkk13xH8if/1t3ahNF
+ HCoZojPkhbOg5pVm7/6gzkKVQXFh0PJl3uzrXG5cwlvEpQjWTcWv1WYL1YLrqYBuHM6F3CZQp
+ JJVGeo43YD3/hZsd+Sc77xZYgvwqxjfWAdA8tS/sbFLE/249c1P12Him2xy8PCKBggvpZW6zf
+ pa/jNHSOkTToxiN3L9xvLvpRojxd7YMTH3PT3eOtZ5Eam5YrFlJjXkGut1INOX7nkG7nPD9FD
+ k5xyzZYcKvWiXjwUyFeGBejXLrI07N6MN4G91HeQ0MX5d22YM/PqikRyQYWMiJ89WvU5iOnBO
+ 3CvYp+CEwFRKEu02Ft/f4Wz67itujCqz5+AYilRkLbhqyx6u/xD/xfE20EPlx+mZpX8K9ZgXC
+ 6WZkMhLcjiqyQYDqdDNAIXQK20N2ydfr7BZnMeS3cJBXaApP2OQFn+eN7WnrRhyTjDH8SV8w3
+ PbXU8laBWG4OLAk6Pqqka4+ZLZPhHTe74II8BoJ0bmGwJbnkhD+lMTrCGY3tsV7lorPvFrZ+L
+ odLi2uVIE35EAIkGEmBj7XsUcnSN2v1SVgSfYS6TxP1F5Wgnd7WdvE3GgCP5XPZ1ou1za0Plz
+ vuju2mLEnmmdpFAnIdTiEjOdeJEE46q08glgD5yd1bhlRsgeAAH+x4OGq7UqhiofX/j5econa
+ mSFWyqjEOna7VvTZ5xuEPIiI9oiosovvCIdCHbT4ywKaV8NzOjfIWDJqXUvB22KHPCKWcQ9IE
+ mymx8ZxenXLQ0oZmO7fMJb3QRnYTv/BW4rdGK8VzNF+IAoV/UUMN69whTsF2AfEZJkR+5Tuoz
+ 28254PT2KyqNQBJkz9qtyyCJJESBsR4IeLSP6JxJnwTekUSIR2lbpENoYVmmEO3AkdhiEFORD
+ 6q4mLhzaKRoLIE/P8OekNdRCeIGHOifADKhq1y/WkxRi99/yw0zwpqcUGOyg8M7jupe9h/Knd
+ 8LFfpg==
+
+
+--Apple-Mail-B9F7B8EE-1FB9-4778-BCDD-EFADA4A43DD1
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Bitte, bitte!
+
+
+Mit freundlichen Gr=C3=BC=C3=9Fen
+
+Ulrich M=C3=BCller
+Joh.-Seb.-Bach-Str. 6
+70771 Leinfelden=20
+
+
+
+Von meinem iPad gesendet
+
+> Am 11.03.2023 um 20:54 schrieb Dr. von der Bey <drvonderbey@gmail.com>:
+>=20
+> =EF=BB=BFLieber Ulli,
+>=20
+> vielen Dank f=C3=BCr die =C3=9Cbermittlung der Berichte. Ich werde sie mir=
+ in den kommenden Tagen durchlesen und mich bei m=C3=B6glichen Fragen an dic=
+h wenden!
+>=20
+> Dir ein sch=C3=B6nes Wochenende und danke f=C3=BCr deine Zusammenfassung d=
+er Sitzung!
+>=20
+> Viele Gr=C3=BC=C3=9Fe
+>=20
+> Olli
+>=20
+>> Am 11.03.2023 um 12:54 schrieb Ulrich M=C3=BCller <ulrich.gerhard.mueller=
+@web.de>:
+>>=20
+>> <Notiz u=CC=88ber die Beiratssitzung in Ulm 10.pdf>
+>=20
+
+--Apple-Mail-B9F7B8EE-1FB9-4778-BCDD-EFADA4A43DD1
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto">Bitte, bitte!<br><br><div dir=3D"ltr"><div>=
+<br></div><div>Mit freundlichen Gr=C3=BC=C3=9Fen<br><br>Ulrich M=C3=BCller</=
+div><div>Joh.-Seb.-Bach-Str. 6</div><div>70771 Leinfelden&nbsp;</div><div></=
+div><div><span style=3D"font-size: 13pt;"><br></span></div><div><span style=3D=
+"font-size: 13pt;"><br></span></div><div><span style=3D"font-size: 13pt;"><b=
+r></span></div><div><span style=3D"font-size: 13pt;">Von meinem iPad gesende=
+t</span></div></div><div dir=3D"ltr"><br><blockquote type=3D"cite">Am 11.03.=
+2023 um 20:54 schrieb Dr. von der Bey &lt;drvonderbey@gmail.com&gt;:<br><br>=
+</blockquote></div><blockquote type=3D"cite"><div dir=3D"ltr">=EF=BB=BF<span=
+>Lieber Ulli,</span><br><span></span><br><span>vielen Dank f=C3=BCr die =C3=9C=
+bermittlung der Berichte. Ich werde sie mir in den kommenden Tagen durchlese=
+n und mich bei m=C3=B6glichen Fragen an dich wenden!</span><br><span></span>=
+<br><span>Dir ein sch=C3=B6nes Wochenende und danke f=C3=BCr deine Zusammenf=
+assung der Sitzung!</span><br><span></span><br><span>Viele Gr=C3=BC=C3=9Fe</=
+span><br><span></span><br><span>Olli</span><br><span></span><br><blockquote t=
+ype=3D"cite"><span>Am 11.03.2023 um 12:54 schrieb Ulrich M=C3=BCller &lt;ulr=
+ich.gerhard.mueller@web.de&gt;:</span><br></blockquote><blockquote type=3D"c=
+ite"><span></span><br></blockquote><blockquote type=3D"cite"><span>&lt;Notiz=
+ u=CC=88ber die Beiratssitzung in Ulm 10.pdf&gt;</span><br></blockquote><spa=
+n></span><br></div></blockquote></body></html>=
+
+--Apple-Mail-B9F7B8EE-1FB9-4778-BCDD-EFADA4A43DD1--
